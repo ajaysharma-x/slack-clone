@@ -23,6 +23,10 @@ import { Modals } from "@/components/modals";
 export const metadata: Metadata = {
   title: "Slack",
   description: "Connect and Build",
+ icons: [
+    { rel: "icon", url: "/slack.svg", type: "image/svg+xml" },
+    { rel: "icon", url: "/slack.svg" }, // fallback
+  ],
 };
 
 export default function RootLayout({
