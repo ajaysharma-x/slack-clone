@@ -14,11 +14,17 @@ import { WorkspaceHeader } from "./workspace-header";
 import { SidebarItem } from "./sidebar-item";
 import { WorkspaceSection } from "./workspace-section";
 import { UserItem } from "./user-item";
+import { SidebarItemsThreadDrafts } from "./sidebar-items-thread-drafts";
 
 export const WorkspaceSideBar = () => {
     const memberId = useMemberId();
     const channelId = useChannelId();
     const workspaceId = useWorkspaceId();
+
+    const handleThreadAndDraft = async () => {
+        
+
+    }
 
     const [_open, setOpen] = useCreateChannelModal();
 
@@ -52,12 +58,12 @@ export const WorkspaceSideBar = () => {
         <div className="flex flex-col bg-[#5E2C5F] h-full">
             <WorkspaceHeader workspace={workspace} isAdmin={member.role === "admin"} />
             <div className="flex flex-col px-2 mt-3">
-                <SidebarItem
+                <SidebarItemsThreadDrafts
                     label="Threads"
                     icon={MessageSquareText}
                     id="threads"
                 />
-                <SidebarItem
+                <SidebarItemsThreadDrafts
                     label="Drafts & Sent"
                     icon={SendHorizonal}
                     id="drafts"
